@@ -8,6 +8,7 @@ import subprocess
 import time
 import json
 import random
+from art import *
 
 # Letters in trained model
 myLetters= ["A","B","C","D","F","G","J","K","L","O"]
@@ -27,7 +28,10 @@ print("Roni Bandini, October 2023, Argentina, @RoniBandini")
 print("")
 print("Stop with CTRL-C")
 print("")
-print("Please be ready to make the sign for: "+selectedLetter)
+print("Please be ready to make the sign for...")
+
+asciiLetter=text2art(selectedLetter,font='block',chr_ignore=True)
+print(asciiLetter)
 
 # start timers
 start = time.time()
